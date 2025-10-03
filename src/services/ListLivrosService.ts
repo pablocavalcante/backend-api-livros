@@ -1,5 +1,5 @@
 import prismaClient from "../prisma";
-import { StatusLeitura } from "../generated/prisma";
+import { StatusLeitura } from "@prisma/client";
 
 class ListLivrosService {
     async execute() {
