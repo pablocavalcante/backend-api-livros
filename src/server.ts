@@ -14,14 +14,14 @@ app.setErrorHandler((error, request, reply) => {
 const start = async () => {
 
     await app.register(cors, {
-        origin: "http://localhost:5173",
+        origin: true,
         methods: ["GET", "POST", "PUT", "DELETE"],
     });
     await app.register(routes);
 
     try {
         await app.listen({ port: parseInt(PORT.toString()), host: HOST});
-        console.log(`Servidor rodando em http://${HOST}:${PORT}`);
+        console.log(`Servidor rodando na porta ${PORT}`);
     } catch (error) {
         console.error("Erro ao iniciar o servidor:", error);
         process.exit(1);
