@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply} from 'fastify';
 import { UpdateLivroService } from '../services/UpdateLivroService';
-import { StatusLeitura } from '../generated/prisma';
+import { StatusLeitura } from '@prisma/client';
 
 class UpdateLivroController{
     async handle(request: FastifyRequest, reply: FastifyReply){

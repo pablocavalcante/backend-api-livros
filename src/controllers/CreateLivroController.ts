@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply} from 'fastify'
 import { CreateLivroService } from '../services/CreateLivroService'
-import { StatusLeitura } from '../generated/prisma'
+import { StatusLeitura } from '@prisma/client'
 
 class CreateLivroController{
     async handle(request: FastifyRequest, reply: FastifyReply){
